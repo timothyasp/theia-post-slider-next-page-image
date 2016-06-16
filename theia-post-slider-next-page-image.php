@@ -16,9 +16,15 @@ class TpsNextPageImage {
          jQuery(document).ready(function($){
             if ($('div.theiaPostSlider_slides').length > 0) {
                var nextSlide = $('div.theiaPostSlider_nav a[rel="next"]');
+               var slideshowNext = $('._startSlideshowButtons a');
                var slideImgs = $('div.theiaPostSlider_slides img[src*="'+window.location.hostname+'"]');
-               if (nextSlide.length && slideImgs.length) {
-                  var nextLink = nextSlide.attr('href');
+               if ((nextSlide.length || slideshowNext.length) && slideImgs.length) {
+                  var nextLink;
+                  if (slideshowNext.length) {
+                     nextLink = slideshowNext.attr('href');
+                  } else {
+                     nextLink = nextSlide.attr('href');
+                  }
                   slideImgs.each(function() {
                      var $this = $(this);
                      var parentEl = $this.parent()
