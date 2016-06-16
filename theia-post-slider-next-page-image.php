@@ -4,7 +4,7 @@ Plugin Name: Theia Post Slider Next Page Image Linker
 Plugin URI:
 Description: Adds a simple script that adds a link to each image of a slideshow that links the user to the next page.
 Author: Al Friedl (Made into a plugin by Tim Asp)
-Version: 1.0.0
+Version: 1.0.1
 */
 
 add_action('wp_footer', 'TpsNextPageImage::wp_footer');
